@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>spinner</title>
+</head>
+<body id="f">
+<center><img onmousedown="startrotate()" onmouseup="endrotate()" src="fidget.png" id = "o" height="300" width="300"></center>
+<br />
+<center>
+    <button onclick="a()"><img src="fidget.png"  id="1" height="150" width="150" ></button>
+    <button onclick="b()"><img src="fidget2.png" id="2" height="150" width="150" ></button>
+    <button onclick="c()"><img src="fidget1.png" id="3" height="150" width="150" ></button>
+    <br />
+    <button onclick="fon1()"><img src="фон.png" id="3" height="150" width="150" ></button>
+    <button onclick="fon2()"><img src="фон1.png" id="3" height="150" width="150" ></button>
+    <button onclick="fon3()"><img src="фон2.png" id="3" height="150" width="150" ></button>
+
+</center>
+
+
+
+
+</body>
+<script>
+    rotate = false;
+    deg = 0;
+    setInterval(function () {
+        if (rotate == true){
+             deg = deg+10;
+        document.getElementById("o").style.transform = "rotate("+deg+"deg)"
+        }
+
+        
+    },100);
+    function startrotate() {
+       rotate = true
+    }
+    function endrotate() {
+      rotate = false
+    }
+
+
+    function a() {
+          document.getElementById("o").src="fidget.png"
+      }
+    function b() {
+          document.getElementById("o").src="fidget2.png"
+
+    }
+    function c() {
+          document.getElementById("o").src="fidget1.png"
+
+    }
+    function fon1(){
+    document.getElementById("f").style.background = "grey"
+}
+    function fon2(){
+        document.getElementById("f").style.background = "red"
+    }
+    function fon3(){
+        document.getElementById("f").style.background = "green"
+    }
+    </script>
+</html>
